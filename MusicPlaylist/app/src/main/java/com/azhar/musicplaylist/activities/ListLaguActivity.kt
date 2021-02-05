@@ -56,11 +56,10 @@ class ListLaguActivity : AppCompatActivity(), onSelectData {
         rvListMusic!!.setLayoutManager(LinearLayoutManager(this))
 
         //get data Music
-        listMusic
+        getListMusic()
     }
 
-    private val listMusic: Unit
-        private get() {
+    private fun getListMusic() {
             progressDialog!!.show()
             AndroidNetworking.get(Api.ListMusic)
                     .setPriority(Priority.MEDIUM)
