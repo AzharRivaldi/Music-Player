@@ -84,12 +84,11 @@ class DetailLaguActivity : AppCompatActivity() {
             imgPlay.setVisibility(View.VISIBLE)
 
             //Method get data
-            detailLagu
+            getDetailLagu()
         }
     }
 
-    private val detailLagu: Unit
-        private get() {
+    private fun getDetailLagu() {
             progressDialog!!.show()
             AndroidNetworking.get(Api.DetailMusic)
                     .addPathParameter("id", idLagu)
